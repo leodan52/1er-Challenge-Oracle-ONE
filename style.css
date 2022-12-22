@@ -1,0 +1,30 @@
+body {
+	background-color: #F3F5FC;
+}
+
+.caja {
+	background-color: green;
+	width: 940px;
+	height: 705px;
+	position: relative;
+	margin: 0 auto;
+
+}
+
+.imagen {
+	position: absolute;
+	left: 5.83%;
+	top: 3.9%;
+}
+
+.cajaTexto1 {
+	position: absolute;
+	left: 16.67%;
+	top: 16.40%;
+}
+
+.botones {
+	position: absolute;
+	left: 16.67%;
+	bottom: 7%;
+}
