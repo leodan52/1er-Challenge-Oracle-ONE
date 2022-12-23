@@ -5,7 +5,6 @@
 
 		<meta charset="UTF-8">
 		<title>Aquí escribe tu título</title>
-		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
 
 <!--	<style>
@@ -23,12 +22,18 @@
 
 		<div class="caja">
 			<h1 class="imagen"><img src="IMAGES/Vector.png"></h1>
-			<input class="cajaTexto1" type="text" name="entradaTexto">
+			<textarea cols="70" rows="10" id="mensaje" class="cajaTexto1" required placeholder="Ingrese texto aquí"></textarea>
 
 			<div class="botones">
 				<p>Solo letras minúsculas y sin acentos</p>
 				<button type="button">Encriptar</button>
 				<button type="button">desencriptar</button>
+			</div>
+
+			<div class="cuadro-texto">
+				<img src="IMAGES/Muñeco.png">
+				<h3>Ningún mensaje fue encontrado</h3>
+				<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 			</div>
 
 		</div>
