@@ -22,13 +22,15 @@
 
 		<div class="caja">
 			<h1 class="imagen"><img src="IMAGES/Vector.png"></h1>
-			<textarea cols="70" rows="10" id="mensaje" class="cajaTexto1" required placeholder="Ingrese texto aquí"></textarea>
+			<form>
+				<textarea cols="35" rows="10" id="mensaje" class="cajaTexto1" required placeholder="Ingrese texto aquí"></textarea>
 
-			<div class="botones">
-				<p>Solo letras minúsculas y sin acentos</p>
-				<button type="button">Encriptar</button>
-				<button type="button">desencriptar</button>
-			</div>
+				<div class="botones">
+					<p><span class="sExclamacion">!</span> Solo letras minúsculas y sin acentos</p>
+					<input type="submit" value="Encriptar" id="botonIzq">
+					<input type="submit" value="Desencriptar">
+				</div>
+			</form>
 
 			<div class="cuadro-texto">
 				<img src="IMAGES/Muñeco.png">
