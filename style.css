@@ -17,16 +17,60 @@ body {
 }
 
 .cajaTexto1 {
+	font-size: 32px;
+	color: #0A3871;
+	resize: none;
 	position: absolute;
-	left: 16.67%;
+	left: 14%;
 	top: 16.40%;
+	background: transparent;
+	border: none;
 }
+
+.cajaTexto1:focus {
+	outline: none;
+}
+
 
 .botones {
 	display: block;
 	position: absolute;
-	left: 16.67%;
+	left: 14%;
 	bottom: 7%;
+}
+
+.botones p {
+	color: #495057;
+}
+
+.botones span {
+	background: #495057;
+	color: white;
+	padding: 2px 8px 2px 8px;
+	border-radius: 11.5px;
+}
+
+.botones input {
+	width: 328px;
+	font-size: 16px;
+	padding: 24px 0;
+	border: 2px solid #0A3871;
+	border-radius: 24px;
+	transition: 0.5s all;
+}
+
+#botonIzq {
+	margin: 0 24px 0 0;
+	background-color: #0A3871;
+	color: #FFFFFF;
+}
+
+.botones input:hover {
+	transform: scale(1.1);
+}
+
+.botones input:active {
+	transform: scale(1);
 }
 
 .cuadro-texto {
@@ -47,3 +91,5 @@ body {
 	border: 4px solid #609ED4;
 
 }
+
+
