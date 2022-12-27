@@ -6,6 +6,9 @@
 		<meta charset="UTF-8">
 		<title>Aquí escribe tu título</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 <!--	<style>
 
@@ -18,29 +21,23 @@
 	</head>
 
 	<body>
-
-
-		<div class="caja">
-			<h1 class="imagen"><img src="IMAGES/Vector.png"></h1>
+		<main class="caja">
+			<h1 class="imagen-logo"><img src="IMAGES/Vector.png" alt="Logo de Alura"></h1>
 			<form>
-				<textarea cols="35" rows="10" id="mensaje" class="cajaTexto1" required placeholder="Ingrese texto aquí"></textarea>
+				<textarea cols="35" rows="10" id="mensaje" class="entrada-texto" required placeholder="Ingrese texto aquí"></textarea>
 
 				<div class="botones">
-					<p><span class="sExclamacion">!</span> Solo letras minúsculas y sin acentos</p>
-					<input type="submit" value="Encriptar" id="botonIzq">
-					<input type="submit" value="Desencriptar">
+					<p class="advertencia">Solo letras minúsculas y sin acentos</p>
+					<input type="submit" value="Encriptar" class="botonEncriptar"><input type="submit" value="Desencriptar">
 				</div>
 			</form>
 
-			<div class="cuadro-texto">
-				<img src="IMAGES/Muñeco.png">
-				<h3>Ningún mensaje fue encontrado</h3>
+			<div class="salida">
+				<img src="IMAGES/Muñeco.png" alt="Muñeco">
+				<h2>Ningún mensaje fue encontrado</h2>
 				<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 			</div>
 
-		</div>
-
-
+		</main>
 	</body>
-
 </html>
