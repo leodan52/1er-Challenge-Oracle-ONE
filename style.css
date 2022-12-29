@@ -4,8 +4,10 @@ body {
 }
 
 .caja {
-	width: 1440px;
-	height: 1024px;
+	width: 80%;
+	max-width: 1440px;
+	height: 100vh;
+	max-height: none;
 	position: relative;
 	margin: 0 auto;
 
@@ -15,9 +17,13 @@ body {
 	position: absolute;
 	left: 5.83%;
 	top: 3.9%;
+	display: block;
 }
 
 .entrada-texto {
+	display: block;
+	width: 50%;
+	height: 50%;
 	font-size: 3em;
 	color: #0A3871;
 	resize: none;
@@ -28,9 +34,9 @@ body {
 	border: none;
 }
 
-.entrada-texto:focus {
+/* .entrada-texto:focus {
 	outline: none;
-}
+} */
 
 .advertencia {
 	color: #495057;
@@ -82,7 +88,7 @@ body {
 	background-color: #FFFFFF;
 	display: block;
 	text-align: center;
-	width: 23.4%;
+	width: 27.8%;
 	padding: 16.9% 2.2%;
 	position: absolute;
 	right: 2.8%;
@@ -90,19 +96,28 @@ body {
 	bottom: 3.9%;
 	border-radius: 32px;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	box-sizing: border-box;
 }
+
 
 #salida-portada:hover {
 	border: 4px solid #609ED4;
 
 }
 
+#salida-portada img {
+	width: 95%;
+	height: auto;
+}
+
 
 #salida {
+	font-size: 2em;
+	color: #495057;
 	background-color: #FFFFFF;
-	font-size: 1.3em;
 	display: none;
-	width: 23.4%;
+	width: 27.8%;
+	height: 92%;
 	padding: 2.24%;
 	position: absolute;
 	right: 2.8%;
@@ -110,6 +125,9 @@ body {
 	bottom: 3.9%;
 	border-radius: 32px;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+	box-sizing: border-box;
+	border: none;
+	resize: none;
 }
 
 #salida:hover {
@@ -117,25 +135,15 @@ body {
 
 }
 
+#salida:focus {
+	outline: none;
+}
+
 #salida:active {
 	transform: scale(0.95);
 	border: 4px solid #d49660;
 }
 
-#salida-texto {
-	width: 80%;
-	height: 90%;
-	font-size: 1.5em;
-	color: #495057;
-	position: absolute;
-	resize: none;
-	background: transparent;
-	border: none;
-}
-
-#salida-texto:focus {
-	outline: none;
-}
 
 
 #alerta-copiado {
@@ -149,5 +157,76 @@ body {
 	left: 42%;
 	border-radius: 10px;
 	opacity: 0.6;
-	transition: opacity 4s, visibility 4s;
+	transition: opacity 7s, visibility 4s;
 }
+
+
+ @media screen and (max-width: 800px) {
+
+	.caja {
+		width: 100%;
+		height: 100vh;
+		padding: 5%;
+		box-sizing: border-box;
+	}
+
+	.imagen-logo {
+		position: relative;
+		left: auto;
+		top: auto;
+	}
+
+	.caja form {
+		height: 70%;
+		padding: 1%;
+		box-sizing: border-box;
+	}
+
+	.entrada-texto {
+		width: 100%;
+		height: 80%;
+		font-size: 2em;
+		position: relative;
+		left: auto;
+		top: auto;
+		box-sizing: border-box;
+	}
+
+	.botones {
+		width: 100%;
+		position: relative;
+		left: auto;
+		top: auto;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	#salida-portada {
+		width: 100%;
+		height: 15%;
+		position: relative;
+		right: auto;
+		top: auto;
+		bottom: auto;
+		padding: 2%;
+		box-sizing: border-box;
+	}
+
+	#salida-portada img {
+		display: none;
+	}
+
+	#salida {
+		width: 100%;
+		height: 50%;
+		margin: auto;
+		min-height: 15%;
+		position: relative;
+		right: auto;
+		top: auto;
+		bottom: auto;
+		padding: 2%;
+		box-sizing: border-box;
+
+	}
+ }

@@ -5,6 +5,7 @@
 
 		<meta charset="UTF-8">
 		<title>Encritador - Challenge ONE</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,7 @@
 		<main class="caja">
 			<h1 class="imagen-logo"><img src="IMAGES/Vector.png" alt="Logo de Alura"></h1>
 			<form>
-				<textarea cols="35" rows="10" id="mensaje" class="entrada-texto" required placeholder="Ingrese texto aquí"></textarea>
+				<textarea id="mensaje" class="entrada-texto" required placeholder="Ingrese texto aquí"></textarea>
 
 				<div class="botones">
 					<p class="advertencia">Solo letras minúsculas y sin acentos</p>
@@ -31,9 +32,9 @@
 				<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 			</div>
 
-			<div id="salida">
-				<textarea id="salida-texto" readonly></textarea>
-			</div>
+			<!-- <div id="salida"> -->
+				<textarea id="salida" readonly></textarea>
+			<!-- </div> -->
 
 			<div id="alerta-copiado">
 				<p><span>Alerta:</span> ¡Has copiado el texto al portapapeles!</p>
