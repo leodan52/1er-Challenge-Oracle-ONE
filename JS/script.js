@@ -11,6 +11,24 @@ let vocales = ["e", "i", "a", "o", "u"]
 let key = ["enter", "imes", "ai", "ober", "ufat"];
 let estado = 0;
 
+function EditarCSS(salida) {
+	const textoArea = document.getElementById("salida");
+
+	textoArea.style.height = "150px";
+	document.getElementById("salida-portada").style.display = "none";
+	document.getElementById("salida").style.display = "block";
+	document.getElementById("salida").value = salida;
+
+	if (screen.width < 800) {
+
+		const altura = textoArea.scrollHeight;
+		console.log(altura)
+		textoArea.style.height = altura*1.1 + "px";
+
+	}
+
+}
+
 function Encriptar() {
 	let cadena = document.getElementById("mensaje").value;
 	let salida = cadena;
@@ -24,10 +42,7 @@ function Encriptar() {
 		salida = salida.replaceAll(vocales[n], key[n]);
 	}
 
-	document.getElementById("salida-portada").style.display = "none";
-	document.getElementById("salida").style.display = "block";
-	document.getElementById("salida").innerHTML = salida;
-
+	EditarCSS(salida);
 }
 
 function Desencriptar() {
@@ -43,10 +58,7 @@ function Desencriptar() {
 		salida = salida.replaceAll(key[n], vocales[n]);
 	}
 
-	document.getElementById("salida-portada").style.display = "none";
-	document.getElementById("salida").style.display = "block";
-	document.getElementById("salida").innerHTML = salida;
-
+	EditarCSS(salida);
 }
 
 function alertarCopiado() {
