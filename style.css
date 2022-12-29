@@ -3,11 +3,9 @@ body {
 	font-family: 'Inter', sans-serif;
 }
 
-.caja {
+#contenedor {
 	width: 80%;
-	max-width: 1440px;
-	height: 100vh;
-	max-height: none;
+	height: 1024px;
 	position: relative;
 	margin: 0 auto;
 
@@ -26,6 +24,7 @@ body {
 	height: 50%;
 	font-size: 3em;
 	color: #0A3871;
+	margin-bottom: 70px;
 	resize: none;
 	position: absolute;
 	left: 14%;
@@ -34,9 +33,9 @@ body {
 	border: none;
 }
 
-/* .entrada-texto:focus {
+.entrada-texto:focus {
 	outline: none;
-} */
+}
 
 .advertencia {
 	color: #495057;
@@ -163,9 +162,9 @@ body {
 
  @media screen and (max-width: 800px) {
 
-	.caja {
+	#contenedor {
 		width: 100%;
-		height: 100vh;
+		height: 1174px;
 		padding: 5%;
 		box-sizing: border-box;
 	}
@@ -176,7 +175,7 @@ body {
 		top: auto;
 	}
 
-	.caja form {
+	#contenedor form {
 		height: 70%;
 		padding: 1%;
 		box-sizing: border-box;
@@ -218,15 +217,49 @@ body {
 
 	#salida {
 		width: 100%;
-		height: 50%;
-		margin: auto;
+		height: fit-content;
+		margin-bottom: 50px;
 		min-height: 15%;
 		position: relative;
 		right: auto;
 		top: auto;
 		bottom: auto;
-		padding: 2%;
+		padding: 4%;
 		box-sizing: border-box;
 
 	}
+ }
+
+ @media screen and (max-width: 400px) {
+	#contenedor {
+		height: 993px;
+	}
+
+	#contenedor form {
+		height: 60%;
+	}
+
+	.entrada-texto {
+		font-size: 1.5em;
+	}
+
+	.botones button {
+		width: 100%;
+	}
+
+	#botonEncriptar {
+		margin: 0 0 4% 0;
+	}
+
+	#salida-portada {
+		font-size: 0.9em;
+		padding: 1% 3%;
+		margin-top: 90px;
+	}
+
+	#salida {
+		font-size: 1.5em;
+		margin-top: 90px;
+	}
+
  }
