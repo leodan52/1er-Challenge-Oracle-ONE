@@ -10,14 +10,6 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-<!--	<style>
-
-			p{
-				text-align: center;
-			}
-
-		</style>  -->
-
 	</head>
 
 	<body>
@@ -28,16 +20,26 @@
 
 				<div class="botones">
 					<p class="advertencia">Solo letras minúsculas y sin acentos</p>
-					<input type="submit" value="Encriptar" class="botonEncriptar"><input type="submit" value="Desencriptar">
+					<!-- <input type="submit" value="Encriptar" id="botonEncriptar"><input type="submit" value="Desencriptar"> -->
+					<button type="button" id="botonEncriptar">Encriptar</button><button type="button" id="botonDesencriptar">Desencriptar</button>
 				</div>
 			</form>
 
-			<div class="salida">
+			<div id="salida-portada">
 				<img src="IMAGES/Muñeco.png" alt="Muñeco">
 				<h2>Ningún mensaje fue encontrado</h2>
 				<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 			</div>
 
+			<div id="salida">
+				<textarea id="salida-texto" readonly></textarea>
+			</div>
+
+			<div id="alerta-copiado">
+				<p><span>Alerta:</span> ¡Has copiado el texto al portapapeles!</p>
+			</div>
+
 		</main>
+		<script type="text/javascript" src="JS/script.js"></script>
 	</body>
 </html>
