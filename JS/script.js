@@ -26,7 +26,7 @@ function Encriptar() {
 
 	document.getElementById("salida-portada").style.display = "none";
 	document.getElementById("salida").style.display = "block";
-	document.getElementById("salida-texto").innerHTML = salida;
+	document.getElementById("salida").innerHTML = salida;
 
 }
 
@@ -45,12 +45,12 @@ function Desencriptar() {
 
 	document.getElementById("salida-portada").style.display = "none";
 	document.getElementById("salida").style.display = "block";
-	document.getElementById("salida-texto").innerHTML = salida;
+	document.getElementById("salida").innerHTML = salida;
 
 }
 
 function alertarCopiado() {
-	let texto = document.getElementById("salida-texto").value;
+	let texto = document.getElementById("salida").value;
 	let alerta = document.getElementById("alerta-copiado");
 
 	navigator.clipboard.writeText(texto);
