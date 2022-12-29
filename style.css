@@ -32,16 +32,6 @@ body {
 	outline: none;
 }
 
-
-.botones {
-	width: 47.9%;
-	display: block;
-	position: absolute;
-	left: 14%;
-	bottom: 7%;
-	padding: 5px;
-}
-
 .advertencia {
 	color: #495057;
 }
@@ -55,14 +45,23 @@ body {
 	border-radius: 11.5px;
 }
 
+.botones {
+	width: 47.9%;
+	display: block;
+	position: absolute;
+	left: 14%;
+	bottom: 7%;
+	padding: 5px;
+}
 
-.botonEncriptar {
+
+#botonEncriptar {
 	margin: 0 4% 0 0;
 	background-color: #0A3871;
 	color: #FFFFFF;
 }
 
-.botones input {
+.botones button, .botones input {
 	width: 48%;
 	font-size: 1em;
 	padding: 3.48% 0;
@@ -71,15 +70,15 @@ body {
 	transition: 0.5s all;
 }
 
-.botones input:hover {
+.botones button:hover, .botones input:hover {
 	transform: scale(1.1);
 }
 
-.botones input:active {
+.botones button:active, .botones input:active {
 	transform: scale(1);
 }
 
-.salida {
+#salida-portada {
 	background-color: #FFFFFF;
 	display: block;
 	text-align: center;
@@ -93,9 +92,62 @@ body {
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
 
-.salida:hover {
+#salida-portada:hover {
 	border: 4px solid #609ED4;
 
 }
 
 
+#salida {
+	background-color: #FFFFFF;
+	font-size: 1.3em;
+	display: none;
+	width: 23.4%;
+	padding: 2.24%;
+	position: absolute;
+	right: 2.8%;
+	top: 3.9%;
+	bottom: 3.9%;
+	border-radius: 32px;
+	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+#salida:hover {
+	border: 4px solid #609ED4;
+
+}
+
+#salida:active {
+	transform: scale(0.95);
+	border: 4px solid #d49660;
+}
+
+#salida-texto {
+	width: 80%;
+	height: 90%;
+	font-size: 1.5em;
+	color: #495057;
+	position: absolute;
+	resize: none;
+	background: transparent;
+	border: none;
+}
+
+#salida-texto:focus {
+	outline: none;
+}
+
+
+#alerta-copiado {
+	visibility: hidden;
+	background: black;
+	color: white;
+	text-align: center;
+	width: 20%;
+	position: fixed;
+	top: 50%;
+	left: 42%;
+	border-radius: 10px;
+	opacity: 0.6;
+	transition: opacity 4s, visibility 4s;
+}
