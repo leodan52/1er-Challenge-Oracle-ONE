@@ -14,12 +14,17 @@ let estado = 0;
 function EditarCSS(salida) {
 	const textoArea = document.getElementById("salida");
 
-	textoArea.style.height = "150px";
+	if (screen.width < 850) {
+		textoArea.style.height = "150px";
+	}
+
 	document.getElementById("salida-portada").style.display = "none";
 	document.getElementById("salida").style.display = "block";
 	document.getElementById("salida").value = salida;
 
-	if (screen.width < 800) {
+	console.log(screen.width < 850)
+
+	if (screen.width < 850) {
 
 		const altura = textoArea.scrollHeight;
 		console.log(altura)
