@@ -159,55 +159,65 @@ body {
 	transition: opacity 7s, visibility 4s;
 }
 
+#alerta-copiado p::before {
+	content: "Alerta: ";
+	font-weight: bold;
+}
 
- @media screen and (max-width: 800px) {
+
+ @media screen and (max-width: 850px) {
 
 	#contenedor {
 		width: 100%;
-		height: 1174px;
+		height: 100vh;
 		padding: 5%;
 		box-sizing: border-box;
 	}
 
+	.imagen-logo, .entrada-texto, .botones, #salida-portada, #salida {
+		position: static;
+	}
+
 	.imagen-logo {
-		position: relative;
-		left: auto;
-		top: auto;
+		height: 5%;
 	}
 
 	#contenedor form {
-		height: 70%;
+		width: 100%;
+		height: 60%;
 		padding: 1%;
 		box-sizing: border-box;
 	}
 
 	.entrada-texto {
 		width: 100%;
-		height: 80%;
+		height: 75%;
 		font-size: 2em;
-		position: relative;
-		left: auto;
-		top: auto;
+		margin-bottom: 0px;
 		box-sizing: border-box;
 	}
 
 	.botones {
 		width: 100%;
-		position: relative;
-		left: auto;
-		top: auto;
+		height: 25%;
 		padding: 0;
 		box-sizing: border-box;
 	}
 
+	.botones button {
+		box-sizing: border-box;
+		transition: all 0.5s;
+	}
+
+	.botones button:active {
+		transform: scale(0.9);
+	}
+
 	#salida-portada {
 		width: 100%;
-		height: 15%;
-		position: relative;
-		right: auto;
-		top: auto;
-		bottom: auto;
-		padding: 2%;
+		height: 25%;
+		padding: 10% 2%;
+		margin: 5% 0;
 		box-sizing: border-box;
 	}
 
@@ -217,30 +227,36 @@ body {
 
 	#salida {
 		width: 100%;
-		height: fit-content;
-		margin-bottom: 50px;
 		min-height: 15%;
-		position: relative;
-		right: auto;
-		top: auto;
-		bottom: auto;
 		padding: 4%;
+		margin: 5% 0;
 		box-sizing: border-box;
 
 	}
- }
 
- @media screen and (max-width: 400px) {
-	#contenedor {
-		height: 993px;
+	#alerta-copiado {
+		width: 40%;
+		left: 30%;
 	}
 
+ }
+
+ @media screen and (max-width: 450px) {
+/* 	#contenedor {
+		height: 100vh;
+	} */
+
 	#contenedor form {
-		height: 60%;
+		height: 70%;
 	}
 
 	.entrada-texto {
 		font-size: 1.5em;
+		height: 65%;
+	}
+
+	.botones {
+		height: 35%;
 	}
 
 	.botones button {
@@ -252,14 +268,20 @@ body {
 	}
 
 	#salida-portada {
+		height: 20%;
 		font-size: 0.9em;
 		padding: 1% 3%;
-		margin-top: 90px;
+		margin: 0;
 	}
 
 	#salida {
 		font-size: 1.5em;
-		margin-top: 90px;
+		margin: 0;
+	}
+
+	#alerta-copiado {
+		width: 50%;
+		left: 24%;
 	}
 
  }
