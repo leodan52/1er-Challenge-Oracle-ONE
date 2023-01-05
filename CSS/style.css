@@ -67,7 +67,7 @@ body {
 	color: #FFFFFF;
 }
 
-.botones button, .botones input {
+.botones button {
 	width: 48%;
 	font-size: 1em;
 	padding: 3.48% 0;
@@ -76,11 +76,11 @@ body {
 	transition: 0.5s all;
 }
 
-.botones button:hover, .botones input:hover {
+.botones button:hover {
 	transform: scale(1.1);
 }
 
-.botones button:active, .botones input:active {
+.botones button:active {
 	transform: scale(1);
 }
 
@@ -173,8 +173,27 @@ footer {
 	padding: 2% 10%;
 }
 
-#contacto p {
+footer p{
 	margin: 0;
+}
+
+#descripcion em::after {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	animation: parpadear 0.80s step-end infinite;
+}
+
+@keyframes parpadear {
+	0%, 100% {border-bottom: 2px solid transparent;}
+	50% {border-bottom: 2px solid #FFFFFF;}
+}
+
+#contacto {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 #contacto ul {

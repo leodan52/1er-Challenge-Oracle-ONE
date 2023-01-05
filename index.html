@@ -16,38 +16,45 @@
 	</head>
 
 	<body>
-		<div class="caja" id="contenedor">
-			<h1 class="imagen-logo"><img src="IMAGES/logo_alura.png" alt="Logo de Alura"></h1>
-			<form id="form">
-				<textarea id="mensaje" class="entrada-texto" required placeholder="Ingrese texto aquí"></textarea>
 
-				<div class="botones">
-					<p class="advertencia">Solo letras minúsculas y sin acentos</p>
-					<!-- <input type="submit" value="Encriptar" id="botonEncriptar"><input type="submit" value="Desencriptar"> -->
-					<button type="button" id="botonEncriptar">Encriptar</button><button type="button" id="botonDesencriptar">Desencriptar</button>
+		<main>
+			<div class="caja" id="contenedor">
+				<h1 class="imagen-logo"><img src="IMAGES/logo_alura.png" alt="Logo de Alura"></h1>
+				<form id="form">
+					<textarea id="mensaje" class="entrada-texto" required placeholder="Ingrese texto aquí"></textarea>
+
+					<div class="botones">
+						<p class="advertencia">Solo letras minúsculas y sin acentos</p>
+						<button type="button" id="botonEncriptar">Encriptar</button><button type="button" id="botonDesencriptar">Desencriptar</button>
+					</div>
+				</form>
+
+				<div id="salida-portada">
+					<img src="IMAGES/Muñeco.png" alt="Muñeco">
+					<h2>Ningún mensaje fue encontrado</h2>
+					<p>Ingresa el texto que desees encriptar o desencriptar.</p>
 				</div>
-			</form>
 
-			<div id="salida-portada">
-				<img src="IMAGES/Muñeco.png" alt="Muñeco">
-				<h2>Ningún mensaje fue encontrado</h2>
-				<p>Ingresa el texto que desees encriptar o desencriptar.</p>
-			</div>
-
-			<!-- <div id="salida"> -->
 				<textarea id="salida" readonly></textarea>
-			<!-- </div> -->
 
-			<div id="alerta-copiado">
-				<p>¡Has copiado el texto al portapapeles!</p>
+				<div id="alerta-copiado">
+					<p>¡Has copiado el texto al portapapeles!</p>
+				</div>
+
 			</div>
+		</main>
 
-		</div>
+
 
 		<footer>
-			<h3>Alura Challenge ONE Principiante en Programación</h3>
+
+			<div id="descripcion">
+				<h3>Challenge ONE <em>Principiante en Programación </em></h3>
+				<p>Sprint 01: Encriptador de texto con Javascript</p>
+			</div>
+
 			<div id="contacto">
-				<p>Por Leonardo D. Santiago</p>
+				<p>Por <em>Leonardo D. Santiago, Grupo 4</em></p>
 				<ul>
 					<li>
 						<a href="https://www.linkedin.com/in/leodansantiago" class="fa-brands fa-linkedin" target="_blank"></a>
