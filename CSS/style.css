@@ -301,7 +301,24 @@ footer p{
 	}
 
 	footer {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding-bottom: 6%;
+	}
+
+	#descripcion p{
+		display: none;
+	}
+
+	#contacto {
+		align-items: center;
+	}
+
+	#contacto ul {
 		display: block;
+		margin: 3% 3% 0 0;
+		white-space: nowrap;
 	}
 
  }
@@ -342,6 +359,10 @@ footer p{
 	#salida {
 		font-size: 1.5em;
 		margin: 0;
+	}
+
+	footer {
+		padding: 5% 0 10% 0;
 	}
 
 	#alerta-copiado {
