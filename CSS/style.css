@@ -144,8 +144,6 @@ body {
 	border: 4px solid #d49660;
 }
 
-
-
 #alerta-copiado {
 	/* visibility: hidden; */
 	background: black;
@@ -225,6 +223,10 @@ footer p{
 	color: #FFFFFF;
 }
 
+#contacto a:hover {
+	color: #d49660;
+}
+
 
  @media screen and (max-width: 850px) {
 
@@ -295,11 +297,6 @@ footer p{
 
 	}
 
-	#alerta-copiado {
-		width: 40%;
-		left: 30%;
-	}
-
 	footer {
 		flex-direction: column;
 		align-items: center;
@@ -319,6 +316,11 @@ footer p{
 		display: block;
 		margin: 3% 3% 0 0;
 		white-space: nowrap;
+	}
+
+	#alerta-copiado {
+		width: 40%;
+		left: 30%;
 	}
 
  }
