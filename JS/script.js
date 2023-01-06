@@ -10,6 +10,7 @@ La letra "e" es convertida para "enter"`
 let vocales = ["e", "i", "a", "o", "u"]
 let key = ["enter", "imes", "ai", "ober", "ufat"];
 let estado = 0;
+let alerta = document.getElementById("alerta-copiado");
 
 function EditarCSS(salida) {
 	const textoArea = document.getElementById("salida");
@@ -22,12 +23,9 @@ function EditarCSS(salida) {
 	document.getElementById("salida").style.display = "block";
 	document.getElementById("salida").value = salida;
 
-	console.log(screen.width < 850)
-
 	if (screen.width < 850) {
 
 		const altura = textoArea.scrollHeight;
-		console.log(altura)
 		textoArea.style.height = altura*1.1 + "px";
 
 	}
@@ -68,26 +66,20 @@ function Desencriptar() {
 
 function alertarCopiado() {
 	let texto = document.getElementById("salida").value;
-	let alerta = document.getElementById("alerta-copiado");
 
 	navigator.clipboard.writeText(texto);
 
-	if (estado == 0) {
-		alerta.style.visibility = "visible";
-		alerta.style.opacity = 0;
-		estado = 1;
-	} else {
-		alerta.style.opacity = 0.6;
-		alerta.style.visibility = "hidden";
-		estado = 0;
-	}
+	alerta.style.animationPlayState = "running";
+}
 
-
-
+function pausedAnimation() {
+	alerta.style.animationPlayState = "paused";
 }
 
 
 document.getElementById("botonEncriptar").addEventListener("click", Encriptar);
 document.getElementById("botonDesencriptar").addEventListener("click", Desencriptar);
 document.getElementById("salida").addEventListener("click", alertarCopiado);
+alerta.addEventListener("webkitAnimationIteration", pausedAnimation, false);
+alerta.addEventListener("animationiteration", pausedAnimation, false);
 

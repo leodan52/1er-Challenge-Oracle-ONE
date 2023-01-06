@@ -147,7 +147,7 @@ body {
 
 
 #alerta-copiado {
-	visibility: hidden;
+	/* visibility: hidden; */
 	background: black;
 	color: white;
 	text-align: center;
@@ -156,13 +156,24 @@ body {
 	top: 50%;
 	left: 42%;
 	border-radius: 10px;
-	opacity: 0.6;
-	transition: opacity 7s, visibility 4s;
+	opacity: 0;
+	animation: aparecer 5s linear infinite paused;
+	/* transition: opacity 7s, visibility 4s; */
 }
 
 #alerta-copiado p::before {
 	content: "Alerta: ";
 	font-weight: bold;
+}
+
+@keyframes aparecer {
+	0%, 100% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
 }
 
 footer {
