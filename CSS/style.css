@@ -76,28 +76,23 @@ body {
 	transition: 0.5s all;
 }
 
-.botones button:hover {
-	transform: scale(1.1);
-}
-
 .botones button:active {
-	transform: scale(1);
+	transform: scale(0.9);
 }
 
 #salida-portada {
-	width: 27.8%;
+	width: 24.8%;
 	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	/* padding: 16.9% 2.2%; */
 	padding: 2.2%;
 	position: absolute;
-	right: 2.8%;
-	top: 3.9%;
-	bottom: 3.9%;
+	right: 5.8%;
+	top: 7%;
+	bottom: 8.9%;
 	border-radius: 32px;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 	box-sizing: border-box;
@@ -114,19 +109,18 @@ body {
 	height: auto;
 }
 
-
 #salida {
 	font-size: 2em;
 	color: #495057;
 	background-color: #FFFFFF;
 	display: none;
-	width: 27.8%;
-	height: 92%;
+	width: 24.8%;
+	height: 84%;
 	padding: 2.24%;
 	position: absolute;
-	right: 2.8%;
-	top: 3.9%;
-	bottom: 3.9%;
+	right: 5.8%;
+	top: 7%;
+	bottom: 8.9%;
 	border-radius: 32px;
 	box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 	box-sizing: border-box;
@@ -235,6 +229,8 @@ footer p{
  @media screen and (max-width: 850px) {
 
 	#contenedor {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
 		height: 100vh;
 		padding: 5%;
@@ -292,9 +288,10 @@ footer p{
 		display: none;
 	}
 
+
 	#salida {
 		width: 100%;
-		min-height: 15%;
+		min-height: 18%;
 		padding: 4%;
 		margin: 5% 0;
 		box-sizing: border-box;
