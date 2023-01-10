@@ -14,20 +14,41 @@ let alerta = document.getElementById("alerta-copiado");
 
 function EditarCSS(salida) {
 	const textoArea = document.getElementById("salida");
+	const portadaSalida = document.getElementById("salida-portada");
+	const contenedor = document.getElementById("contenedor");
+	const formArea = document.getElementById("form");
+	const logo = document.getElementById("imagen-logo");
 
-	if (screen.width < 850) {
-		textoArea.style.height = "150px";
+	const inicialheithcont = contenedor.clientHeight;
+	let minAltotextoArea = portadaSalida.clientHeight;
+	const inicialAltotextoArea = textoArea.scrollHeight;
+	const alturaform = formArea.clientHeight;
+	const alturaLogo = logo.clientHeight;
+
+	if (screen.width < 850 & inicialAltotextoArea != 0) {
+		minAltotextoArea = inicialAltotextoArea;
+		textoArea.style.height = "18vh";
 	}
 
-	document.getElementById("salida-portada").style.display = "none";
-	document.getElementById("salida").style.display = "block";
-	document.getElementById("salida").value = salida;
+	portadaSalida.style.display = "none";
+	textoArea.style.display = "block";
+	textoArea.value = salida;
 
 	if (screen.width < 850) {
 
 		const altura = textoArea.scrollHeight;
-		textoArea.style.height = altura*1.1 + "px";
+		const newAlturaTexArea = altura*1.1;
+		const incremento = newAlturaTexArea - minAltotextoArea;
+		const newAlturacont = inicialheithcont + incremento;
 
+		contenedor.style.height = newAlturacont + "px" ;
+
+		logo.style.height = alturaLogo + "px";
+		formArea.style.height = alturaform + "px";
+		textoArea.style.height = newAlturaTexArea + "px";
+
+		console.log(newAlturaTexArea);
+		console.log(textoArea.scrollHeight);
 	}
 
 }
