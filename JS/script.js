@@ -7,17 +7,16 @@ La letra "e" es convertida para "enter"`
 `La letra "o" es convertida para "ober"`
 `La letra "u" es convertida para "ufat"` */
 
-let vocales = ["e", "i", "a", "o", "u"]
-let key = ["enter", "imes", "ai", "ober", "ufat"];
-let estado = 0;
-let alerta = document.getElementById("alerta-copiado");
+const vocales = ["e", "i", "a", "o", "u"]
+const key = ["enter", "imes", "ai", "ober", "ufat"];
+const alerta = document.getElementById("alerta-copiado");
 const textoAreaSalida = document.getElementById("salida");
 
 function Encriptar() {
 
 	// Encripta mensaje que se ingresa en el textarea con ID mensaje
 
-	let cadena = document.getElementById("mensaje").value;
+	const cadena = document.getElementById("mensaje").value;
 	let salida = cadena.toLowerCase();
 
 	if (cadena == "") {
@@ -36,7 +35,7 @@ function Desencriptar() {
 
 	// Desencripta mensaje ya encriptado en que se ingresa en el textarea con ID mensaje
 
-	let cadena = document.getElementById("mensaje").value;
+	const cadena = document.getElementById("mensaje").value;
 	let salida = cadena.toLowerCase();
 
 	if (cadena == "") {
@@ -56,7 +55,7 @@ function alertarCopiado() {
 
 	// Reproduce animación que despliega mensaje de texto copiado
 
-	let texto = textoAreaSalida.value;
+	const texto = textoAreaSalida.value;
 
 	navigator.clipboard.writeText(texto);
 	alerta.style.animationPlayState = "running";
@@ -114,6 +113,7 @@ function EditarCSS(salida) {
 
 }
 
+// Eventos
 document.getElementById("botonEncriptar").addEventListener("click", Encriptar);
 document.getElementById("botonDesencriptar").addEventListener("click", Desencriptar);
 document.getElementById("salida").addEventListener("click", alertarCopiado);
