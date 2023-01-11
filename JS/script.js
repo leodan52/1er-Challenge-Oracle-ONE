@@ -11,67 +11,33 @@ let vocales = ["e", "i", "a", "o", "u"]
 let key = ["enter", "imes", "ai", "ober", "ufat"];
 let estado = 0;
 let alerta = document.getElementById("alerta-copiado");
-
-function EditarCSS(salida) {
-	const textoArea = document.getElementById("salida");
-	const portadaSalida = document.getElementById("salida-portada");
-	const contenedor = document.getElementById("contenedor");
-	const formArea = document.getElementById("form");
-	const logo = document.getElementById("imagen-logo");
-
-	const inicialheithcont = contenedor.clientHeight;
-	let minAltotextoArea = portadaSalida.clientHeight;
-	const inicialAltotextoArea = textoArea.scrollHeight;
-	const alturaform = formArea.clientHeight;
-	const alturaLogo = logo.clientHeight;
-
-	if (screen.width < 850 & inicialAltotextoArea != 0) {
-		minAltotextoArea = inicialAltotextoArea;
-		textoArea.style.height = "18vh";
-	}
-
-	portadaSalida.style.display = "none";
-	textoArea.style.display = "block";
-	textoArea.value = salida;
-
-	if (screen.width < 850) {
-
-		const altura = textoArea.scrollHeight;
-		const newAlturaTexArea = altura*1.1;
-		const incremento = newAlturaTexArea - minAltotextoArea;
-		const newAlturacont = inicialheithcont + incremento;
-
-		contenedor.style.height = newAlturacont + "px" ;
-
-		logo.style.height = alturaLogo + "px";
-		formArea.style.height = alturaform + "px";
-		textoArea.style.height = newAlturaTexArea + "px";
-
-		console.log(newAlturaTexArea);
-		console.log(textoArea.scrollHeight);
-	}
-
-}
+const textoAreaSalida = document.getElementById("salida");
 
 function Encriptar() {
+
+	// Encripta mensaje que se ingresa en el textarea con ID mensaje
+
 	let cadena = document.getElementById("mensaje").value;
-	let salida = cadena;
+	let salida = cadena.toLowerCase();
 
 	if (cadena == "") {
 		return false;
 	}
-
 
 	for (let n = 0; n < vocales.length; n++) {
 		salida = salida.replaceAll(vocales[n], key[n]);
 	}
 
 	EditarCSS(salida);
+
 }
 
 function Desencriptar() {
+
+	// Desencripta mensaje ya encriptado en que se ingresa en el textarea con ID mensaje
+
 	let cadena = document.getElementById("mensaje").value;
-	let salida = cadena;
+	let salida = cadena.toLowerCase();
 
 	if (cadena == "") {
 		return false;
@@ -83,20 +49,70 @@ function Desencriptar() {
 	}
 
 	EditarCSS(salida);
+
 }
 
 function alertarCopiado() {
-	let texto = document.getElementById("salida").value;
+
+	// Reproduce animación que despliega mensaje de texto copiado
+
+	let texto = textoAreaSalida.value;
 
 	navigator.clipboard.writeText(texto);
-
 	alerta.style.animationPlayState = "running";
+
 }
 
 function pausedAnimation() {
+
+	/* Detiene animación del mensaje de texto copiado para que se reproduzca
+	una vez por evento */
+
 	alerta.style.animationPlayState = "paused";
 }
 
+function EditarCSS(salida) {
+
+	/* Prepara el visual del proyecto modificando el estilo de varios elementos
+	para la impresión de la salida */
+
+	const contenedor = document.getElementById("contenedor");
+	const logo = document.getElementById("imagen-logo");
+	const formArea = document.getElementById("form");
+	const portadaSalida = document.getElementById("salida-portada");
+
+	const inicialheithcont = contenedor.clientHeight;
+	const alturaform = formArea.clientHeight;
+	const alturaLogo = logo.clientHeight;
+	let minAltotextoAreaSalida = portadaSalida.clientHeight;
+	const inicialAltotextoAreaSalida = textoAreaSalida.scrollHeight;
+
+
+	if (screen.width < 850 & inicialAltotextoAreaSalida != 0) {
+		minAltotextoAreaSalida = inicialAltotextoAreaSalida;
+		textoAreaSalida.style.height = "18vh";
+	}
+
+	portadaSalida.style.display = "none";
+	textoAreaSalida.style.display = "block";
+	textoAreaSalida.value = salida;
+
+	if (screen.width < 850) {
+
+		const altura = textoAreaSalida.scrollHeight;
+		const newAlturaTexArea = altura*1.1;
+		const incremento = newAlturaTexArea - minAltotextoAreaSalida;
+		const newAlturacont = inicialheithcont + incremento;
+
+		contenedor.style.height = newAlturacont + "px" ;
+
+		logo.style.height = alturaLogo + "px";
+		formArea.style.height = alturaform + "px";
+		textoAreaSalida.style.height = newAlturaTexArea + "px";
+
+	}
+
+}
 
 document.getElementById("botonEncriptar").addEventListener("click", Encriptar);
 document.getElementById("botonDesencriptar").addEventListener("click", Desencriptar);
