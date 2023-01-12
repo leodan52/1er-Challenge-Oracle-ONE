@@ -72,44 +72,11 @@ function pausedAnimation() {
 
 function EditarCSS(salida) {
 
-	/* Prepara el visual del proyecto modificando el estilo de varios elementos
-	para la impresión de la salida */
-
-	const contenedor = document.getElementById("contenedor");
-	const logo = document.getElementById("imagen-logo");
-	const formArea = document.getElementById("form");
 	const portadaSalida = document.getElementById("salida-portada");
-
-	const inicialheithcont = contenedor.clientHeight;
-	const alturaform = formArea.clientHeight;
-	const alturaLogo = logo.clientHeight;
-	let minAltotextoAreaSalida = portadaSalida.clientHeight;
-	const inicialAltotextoAreaSalida = textoAreaSalida.scrollHeight;
-
-
-	if (screen.width < 850 & inicialAltotextoAreaSalida != 0) {
-		minAltotextoAreaSalida = inicialAltotextoAreaSalida;
-		textoAreaSalida.style.height = "18vh";
-	}
 
 	portadaSalida.style.display = "none";
 	textoAreaSalida.style.display = "block";
 	textoAreaSalida.value = salida;
-
-	if (screen.width < 850) {
-
-		const altura = textoAreaSalida.scrollHeight;
-		const newAlturaTexArea = altura*1.1;
-		const incremento = newAlturaTexArea - minAltotextoAreaSalida;
-		const newAlturacont = inicialheithcont + incremento;
-
-		contenedor.style.height = newAlturacont + "px" ;
-
-		logo.style.height = alturaLogo + "px";
-		formArea.style.height = alturaform + "px";
-		textoAreaSalida.style.height = newAlturaTexArea + "px";
-
-	}
 
 }
 
