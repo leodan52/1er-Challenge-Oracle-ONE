@@ -72,6 +72,8 @@ function pausedAnimation() {
 
 function EditarCSS(salida) {
 
+	/* Edita el estilo según sea requerido para imprimir el mensaje encriptado */
+
 	const portadaSalida = document.getElementById("salida-portada");
 
 	portadaSalida.style.display = "none";
@@ -79,15 +81,19 @@ function EditarCSS(salida) {
 	textoAreaSalida.value = salida;
 
 	if (window.innerWidth <= 915) {
-		textoAreaSalida.style.height = textoAreaSalida.scrollHeight + "px";
+		textoAreaSalida.style.height = (textoAreaSalida.scrollHeight*1.01) + "px";
 	}
 
 }
 
 // Eventos
 window.addEventListener("resize", function(){
+
+	/* Mantiene el tamaño del cuadro de salida responsivo */
+
 	if (this.innerWidth <= 915) {
-		textoAreaSalida.style.height = textoAreaSalida.scrollHeight + "px";
+		textoAreaSalida.style.height = "auto";
+		textoAreaSalida.style.height = (textoAreaSalida.scrollHeight*1.01) + "px";
 	} else {
 		textoAreaSalida.style.height = 84 + "%";
 	}
