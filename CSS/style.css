@@ -288,8 +288,7 @@ footer p{
 
 	#salida {
 		width: 100%;
-		height: fit-content;
-		block-size: fit-content;
+		height:	auto;
 		min-height: 16vmax;
 		padding: 4%;
 		margin: 0;
