@@ -78,9 +78,20 @@ function EditarCSS(salida) {
 	textoAreaSalida.style.display = "block";
 	textoAreaSalida.value = salida;
 
+	if (window.innerWidth <= 915) {
+		textoAreaSalida.style.height = textoAreaSalida.scrollHeight + "px";
+	}
+
 }
 
 // Eventos
+window.addEventListener("resize", function(){
+	if (this.innerWidth <= 915) {
+		textoAreaSalida.style.height = textoAreaSalida.scrollHeight + "px";
+	} else {
+		textoAreaSalida.style.height = 84 + "%";
+	}
+});
 document.getElementById("botonEncriptar").addEventListener("click", Encriptar);
 document.getElementById("botonDesencriptar").addEventListener("click", Desencriptar);
 document.getElementById("salida").addEventListener("click", alertarCopiado);
