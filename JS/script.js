@@ -58,6 +58,7 @@ function alertarCopiado() {
 	const texto = textoAreaSalida.value;
 
 	navigator.clipboard.writeText(texto);
+	alerta.style.display = "block";
 	alerta.style.animationPlayState = "running";
 
 }
@@ -68,6 +69,7 @@ function pausedAnimation() {
 	una vez por evento */
 
 	alerta.style.animationPlayState = "paused";
+	alerta.style.display = "none";
 }
 
 function EditarCSS(salida) {
